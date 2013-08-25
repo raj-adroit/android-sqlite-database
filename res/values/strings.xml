@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lakshmi Agencies</string>
+    <string name="action_settings">Settings</string>
+    <string name="customer_list">Customers</string>
+    <string name="add_new">Create Customer</string>
+    <string name="cust_name_lable">Customer Name</string>
+    <string name="title_activity_stock">Stock</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_tabbed">Lakshmi Agencies</string>
+    <string name="title_activity_lakshmi_agencies">Lakshmi Agencies</string>
+    <string name="title_section1">Customers</string>
+    <string name="title_section2">Stocks</string>
+    <string name="title_section3">Section 3</string>
+
+</resources>
