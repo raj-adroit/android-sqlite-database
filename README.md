@@ -4,8 +4,9 @@
 
 #### Screen shots ####
 
-![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/1.png "List screen")
+![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/1.png?raw=true "List screen")
 
-![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/2.png "Enter some data")
+![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/2.png?raw=true "Enter some data")
 
-![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/3.png "List details from database")
+![alt text](https://github.com/raj-inevitable/android_sqlite_database/blob/master/screen_shots/3.png?raw=true "List details from database")
+
