@@ -17,3 +17,8 @@ local.properties
 
 # Eclipse settings
 .settings/
+.project
+.classpath
+
+# Temp files
+README.md~
