@@ -60,52 +60,43 @@ public class CustomerActivity extends ListActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.add_customer) {
         	
-        	// get prompts.xml view
-        				LayoutInflater li = LayoutInflater.from(context);
-        				View promptsView = li.inflate(R.layout.cust_create, null);
+        // get prompts.xml view
+        LayoutInflater li = LayoutInflater.from(context);
+        View promptsView = li.inflate(R.layout.cust_create, null);
 
-        				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-        						context);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        // set prompts.xml to alertdialog builder
+        
 
-        				// set prompts.xml to alertdialog builder
-        				alertDialogBuilder.setView(promptsView);
+        alertDialogBuilder.setView(promptsView);
 
-        				final EditText cust_name = (EditText) promptsView
-        						.findViewById(R.id.editText1);
+        final EditText cust_name = (EditText) promptsView.findViewById(R.id.editText1);
 
-        				// set dialog message
-        				alertDialogBuilder
-        					.setCancelable(false)
-        					.setPositiveButton("OK",
-        					  new DialogInterface.OnClickListener() {
-        					    public void onClick(DialogInterface dialog,int id) {
-        						// Get the user input and insert into table
-        					    @SuppressWarnings("unchecked")
-								ArrayAdapter<Customer> adapter = (ArrayAdapter<Customer>) getListAdapter();
-        					    Customer customer = null;
-        					    customer = cust_datasource.createCustomer(cust_name.getText().toString());
-        					    adapter.add(customer);
-        					    adapter.notifyDataSetChanged();
-        					   //database transaction ends
+        // set dialog message
+        alertDialogBuilder.setCancelable(false).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        	public void onClick(DialogInterface dialog,int id) {
+        	// Get the user input and insert into table
+        	@SuppressWarnings("unchecked")
+			ArrayAdapter<Customer> adapter = (ArrayAdapter<Customer>) getListAdapter();
+        	Customer customer = null;
+        	customer = cust_datasource.createCustomer(cust_name.getText().toString());
+        	adapter.add(customer);
+        	adapter.notifyDataSetChanged();
+        	//database transaction ends
+        	}
+        	}).setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+        		public void onClick(DialogInterface dialog,int id) {
+        		dialog.cancel();
+        		 }
+        	});
 
-        					    }
-        					  })
-        					.setNegativeButton("Cancel",
-        					  new DialogInterface.OnClickListener() {
-        					    public void onClick(DialogInterface dialog,int id) {
-        						dialog.cancel();
-        					    }
-        					  });
+        	// create alert dialog
+        	AlertDialog alertDialog = alertDialogBuilder.create();
 
-        				// create alert dialog
-        				AlertDialog alertDialog = alertDialogBuilder.create();
-
-        				// show it
-        				alertDialog.show();
-        	
+        	// show it
+        	alertDialog.show();
         }
-    	
-    	
+  	
     	return super.onOptionsItemSelected(item);
     }
     
